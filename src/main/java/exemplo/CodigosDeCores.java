@@ -24,26 +24,26 @@ public class CodigosDeCores {
                     .replace("K", "");
 
             valorConvertido = (int) (Double.parseDouble(valorSemK) * 1000);
-            System.out.println(valorConvertido);
+//            System.out.println(valorConvertido);
         } else if (valorDeOhms.toLowerCase().contains("m")) {
             String valorSemM = valorDeOhms.replace("M", "")
                     .replace("m", "");
             valorConvertido = (int) (Double.parseDouble(valorSemM) * 1000000);
-            System.out.println(valorConvertido);
+//            System.out.println(valorConvertido);
         } else {
             valorConvertido = Integer.parseInt(valorDeOhms);
-            System.out.println(valorConvertido);
+//            System.out.println(valorConvertido);
         }
 
         String valorStr = Integer.toString(valorConvertido);
         System.out.println(valorStr);
         String numerosResisters = valorStr.substring(0,2);
-        System.out.println(numerosResisters);
+//        System.out.println(numerosResisters);
         int doisPrimeirosNumeros = Integer.parseInt(numerosResisters);
         int base = doisPrimeirosNumeros;
         int result = valorConvertido;
         int x = (result / base) / 10 ;
-        System.out.println(x);
+//        System.out.println(x);
 
         String[] cores = {"preto", "marrom", "vermelho", "laranja", "amarelo", "verde", "azul", "violeta", "cinza", "branco"};
 
