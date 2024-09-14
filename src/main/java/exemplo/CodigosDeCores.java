@@ -4,7 +4,9 @@ package exemplo;
 import java.util.Scanner;
 
 
+
 public class CodigosDeCores {
+
 
 
     static int valorConvertido;
@@ -33,7 +35,6 @@ public class CodigosDeCores {
             System.out.println(valorConvertido);
         }
 
-
         String valorStr = Integer.toString(valorConvertido);
         System.out.println(valorStr);
         String numerosResisters = valorStr.substring(0,2);
@@ -44,22 +45,24 @@ public class CodigosDeCores {
         int x = (result / base) / 10 ;
         System.out.println(x);
 
+        String[] cores = {"preto", "marrom", "vermelho", "laranja", "amarelo", "verde", "azul", "violeta", "cinza", "branco"};
 
+        StringBuilder resultado = new StringBuilder();
+
+        for (char digito : numerosResisters.toCharArray()) {
+            int v = Character.getNumericValue(digito);
+            resultado.append(cores[v]).append(", ");
+        }
+            if (x >= 0 && x < cores.length) {
+                resultado.append(cores[x]).append(", ");
+            }
+        resultado.append("dourado");
+
+        System.out.println(resultado);
         scanner.close();
-
-
-
-//                .subString(0,2);
-
-
-
-    String[] valorDasCores ={
-        "PRETO", "MARROM", "VERMELHO", "LARANJA", "AMARELO", "VERDE", "AZUL",
-        "VIOLETA", "CINZA", "BRANCO"
-    };
-
-
     }
+
+
 }
 
 
